@@ -7,17 +7,17 @@ export default function AboutMe() {
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-4">
           <p className="text-lg leading-relaxed ">
-            Hello! I'm a passionate developer with a strong foundation in web development and a keen interest in Machine Learning and Artificial Intelligence.
+            Hello! I am a passionate developer with a strong foundation in web development and a keen interest in Machine Learning and Artificial Intelligence.
             I also solve DSA problems and compete in coding competitions on platforms like GeeksforGeeks and LeetCode.
             I also participate in Kaggle competitions and have a good understanding of the ML/AI concepts.
           </p>
           <p className="text-lg leading-relaxed">
             My journey in tech began with a curiosity about how websites work, which led me to explore various
-            programming languages and frameworks. I'm constantly learning and expanding my skill set to stay current
+            programming languages and frameworks. I am constantly learning and expanding my skill set to stay current
             with the latest technologies and best practices, along with advancements in the ML/AI domain.
           </p>
           <p className="text-lg leading-relaxed">
-            When I'm not coding, you can find me exploring nature, reading tech blogs, or experimenting with new recipes
+            When I am not coding, you can find me exploring nature, reading tech blogs, or experimenting with new recipes
             in the kitchen.
           </p>
         </div>

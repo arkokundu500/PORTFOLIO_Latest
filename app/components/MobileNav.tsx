@@ -15,7 +15,7 @@ export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
 
-  const toggleMenu = () => setIsOpen(!isOpen)
+  /* const toggleMenu = () => setIsOpen(!isOpen) */
   const closeMenu = () => setIsOpen(false)
 
   useEffect(() => {

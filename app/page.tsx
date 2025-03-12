@@ -18,7 +18,7 @@ export default function Home() {
       >
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-blue-400">Arko Kundu</span>
+            Hi, I am <span className="text-blue-400">Arko Kundu</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 flex flex-wrap justify-center items-center gap-2">
             <span>Call me a - </span>

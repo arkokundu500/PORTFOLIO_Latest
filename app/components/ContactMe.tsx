@@ -53,7 +53,7 @@ export default function ContactMe() {
         <div>
           <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
           <p className="mb-8 text-lg text-gray-300">
-            I'm always open to new opportunities and collaborations. Feel free to reach out if you have a question or
+            I am always open to new opportunities and collaborations. Feel free to reach out if you have a question or
             just want to say hello!
           </p>
 
@@ -199,7 +199,7 @@ export default function ContactMe() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Your message has been sent successfully! I'll get back to you soon.
+                Your message has been sent successfully! I will get back to you soon.
               </motion.div>
             )}
 
