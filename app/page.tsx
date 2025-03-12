@@ -1,95 +1,56 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ProfilePhoto from "./components/ProfilePhoto"
+import AboutMe from "./components/AboutMe"
+import Skills from "./components/Skills"
+import Projects from "./components/Projects"
+import ContactMe from "./components/ContactMe"
+import TextScramble from "./components/TextScramble"
+import WaveAnimation from "./components/WaveAnimation"
+import MusicPlayer from "./components/MusicPlayer"
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const developerRoles = ["Web Dev", "ML/AI Dev", "Backend Dev", "Python Dev", "Cloud Dev"]
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="bg-gray-900 text-white">
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 px-4"
+      >
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Hi, I'm <span className="text-blue-400">Arko Kundu</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-300 flex flex-wrap justify-center items-center gap-2">
+            <span>Call me a - </span>
+            <TextScramble texts={developerRoles} className="text-blue-400 font-semibold" />
+          </p>
+          <ProfilePhoto />
+          <div className="mt-10">
+            <a
+              href="https://drive.google.com/file/d/16D-wli2J50cufAgx3tDFzH2OnO--D6mJ/view?usp=drive_linkt"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full inline-block"
+            >
+              My Resume
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <ContactMe />
+
+      <WaveAnimation />
+
+      <footer className="bg-black text-white py-8 text-center">
+        <div className="max-w-6xl mx-auto px-4">
+          <p>© {new Date().getFullYear()} Arko Kundu. All rights reserved.</p>
+          <p className="mt-2 text-gray-400">Made with ❤️ using Next.js and Tailwind CSS</p>
+        </div>
       </footer>
+      <MusicPlayer />
     </div>
-  );
+  )
 }
+
