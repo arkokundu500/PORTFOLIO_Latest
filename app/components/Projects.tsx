@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: "Course Display Platform",
     description: "A full-featured online website having display of courses with course selecting features and Authentication System using Firebase and custom Login.",
-    image: "/chatbot.jpg",
+    image: "/coming.png",
     tags: ["React", "Node.js", "MongoDB", "Tailwind CSS","JWT","Swiper JS","Headless UI"],
     liveLink: "#",
     githubLink: "https://github.com/arkokundu500/Mern-Project-1",
