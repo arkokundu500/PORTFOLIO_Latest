@@ -47,7 +47,7 @@ const projects = [
     title: "Messaging Application",
     description: "A messaging application that allows users to send messages to each other on a serverless platform.",
     image: "/Message.png",
-    tags: ["React.js", "Tailwind CSS", "Strapi","Headless CMS" ,"Responsive Design"],
+    tags: ["React", "Tailwind CSS", "Strapi","Headless CMS" ,"Responsive Design"],
     liveLink: "#",
     githubLink: "https://github.com/arkokundu500/Messaging-Application",
   },
@@ -59,10 +59,28 @@ const projects = [
     tags: ["Python", "Machine Learning", "Hugging Face","SQ Lite"],
     liveLink: "https://huggingface.co/spaces/arkokundu500/Text_to_SQL_GenAI",
     githubLink: "https://github.com/arkokundu500/LLM-Application-on-custom-dataset",
+  },
+  {
+    id: 7,
+    title: "Typing Speed Test",
+    description: "A typing speed test application to measure how fast you can type and measure the accuracy.",
+    image: "/type_test.png",
+    tags: ["HTML/CSS", "Javascript","Responsive Design"],
+    liveLink: "https://type-test-arko500.netlify.app/",
+    githubLink: "",
+  },
+  {
+    id: 8,
+    title: "Virtual Assistant - Jarvis",
+    description: "A virtual assistant application that helps users to provide information and perform tasks through voice commands.Try saying -> Open google, Open Instagram, Play Come and Get your Love, Isaac Newton Wikipedia",
+    image: "/jarvis.png",
+    tags: ["HTML/CSS","JavaScript","Voice command"],
+    liveLink: "https://jarvis-va.netlify.app/",
+    githubLink: "",
   }
 ]
 
-const categories = ["All", "React", "Next.js","Tailwind CSS","Machine Learning"]
+const categories = ["All", "React", "Next.js","Tailwind CSS","Machine Learning","HTML/CSS"]
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All")

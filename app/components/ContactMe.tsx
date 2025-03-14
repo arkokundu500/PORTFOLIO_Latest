@@ -17,34 +17,70 @@ export default function ContactMe() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus(null)
+    setErrorMessage("")
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus("success")
+    try {
+      // Create form data object
+      const formDataToSend = new FormData()
 
-      // Reset form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+      // Add the access key
+      formDataToSend.append("access_key", "00be21f5-9387-41e6-bd8f-0fc0a9ee728a")
+
+      // Add form fields
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value)
       })
 
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null)
-      }, 5000)
-    }, 1500)
+      // Convert to JSON
+      const jsonData = JSON.stringify(Object.fromEntries(formDataToSend))
+
+      // Send to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: jsonData,
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        // Success
+        setSubmitStatus("success")
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        // API returned an error
+        setSubmitStatus("error")
+        setErrorMessage(result.message || "Something went wrong. Please try again.")
+      }
+    } catch (error) {
+      // Network or other error
+      setSubmitStatus("error")
+      setErrorMessage("Failed to submit the form. Please check your connection and try again.")
+      console.error("Form submission error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -53,7 +89,7 @@ export default function ContactMe() {
         <div>
           <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
           <p className="mb-8 text-lg text-gray-300">
-            I am always open to new opportunities and collaborations. Feel free to reach out if you have a question or
+            I'm always open to new opportunities and collaborations. Feel free to reach out if you have a question or
             just want to say hello!
           </p>
 
@@ -64,8 +100,8 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <a href="mailto:arkokundu500@gmail.com" className="text-blue-400 hover:underline">
-                  arkokundu500@gmail.com
+                <a href="mailto:arkokundu200@gmail.com" className="text-blue-400 hover:underline">
+                  arkokundu200@gmail.com
                 </a>
               </div>
             </div>
@@ -76,8 +112,8 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <a href="tel:+91 7439817750" className="text-blue-400 hover:underline">
-                  +91 7439817750
+                <a href="tel:+917439817750" className="text-blue-400 hover:underline">
+                  +91 74398 17750
                 </a>
               </div>
             </div>
@@ -88,7 +124,7 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-300">Kolkata,West Bengal,India</p>
+                <p className="text-gray-300">West Bengal,India</p>
               </div>
             </div>
           </div>
@@ -159,7 +195,7 @@ export default function ContactMe() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg flex items-center justify-center"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <span className="flex items-center">
@@ -199,7 +235,7 @@ export default function ContactMe() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Your message has been sent successfully! I will get back to you soon.
+                Thanks for contacting Arko Kundu. Will get back to you soon.
               </motion.div>
             )}
 
@@ -209,7 +245,7 @@ export default function ContactMe() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                There was an error sending your message. Please try again later.
+                {errorMessage || "There was an error sending your message. Please try again later."}
               </motion.div>
             )}
           </form>
