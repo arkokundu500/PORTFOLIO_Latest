@@ -39,7 +39,7 @@ const projects = [
     description: "A platform that provides virtual labs for the students to perform experiments. It is a group project done during Felicity Hackathon of IIIT Hyderabad.",
     image: "/V Labs.png",
     tags: ["Next.js", "Tailwind CSS", "TypeScript","Responsive Design"],
-    liveLink: "#",
+    liveLink: "https://vlabs-2025-sr.vercel.app/",
     githubLink: "https://github.com/arkokundu500/VirtualLabs",
   },
   {
