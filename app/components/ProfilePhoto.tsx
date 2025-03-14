@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import profilePic from '../../public/profile-pic.png'
 import { motion } from "framer-motion"
 
 
@@ -28,7 +27,7 @@ export default function ProfilePhoto() {
       transition={{ duration: 2, ease: "easeInOut" }}
       whileHover={{ scale: 1.1 }}>
         <Image
-          src={profilePic}
+          src="/profile-pic-3.png?height=384&width=384"
           alt="Profile"
           width={384}
           height={384}
