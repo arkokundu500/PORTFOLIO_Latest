@@ -22,7 +22,6 @@ const technologies = [
   "Git",
   "GitHub",
   "VS Code",
-  "Figma",
   "Numpy",
   "Pandas",
   "MongoDB",
