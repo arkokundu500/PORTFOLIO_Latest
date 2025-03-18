@@ -38,7 +38,7 @@ export default function Home() {
               <TextScramble texts={developerRoles} className="text-blue-400 font-semibold" />
             </p>
             <ProfilePhoto />
-            <div className="mt-8">
+            <div className="mt-12">
               <a
                 href="https://drive.google.com/file/d/16D-wli2J50cufAgx3tDFzH2OnO--D6mJ/view?usp=drive_linkt"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full inline-block"

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 
 interface SplashScreenProps {
@@ -8,15 +8,12 @@ interface SplashScreenProps {
 }
 
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
-  const [isAnimating, setIsAnimating] = useState(true)
-
   // Colors from the website
   const darkBg = "#111827" // bg-gray-900
   const darkerBg = "#0A0F1A" // bg-gray-950
   const blueAccent = "#2563EB" // bg-blue-600
-  const lightBlue = "#60A5FA" // bg-blue-400
 
-  // Create a grid of 10x10 for the checkboard (more cells for smoother effect)
+  // Create a grid of 10x6 for the checkboard
   const gridSize = { x: 10, y: 6 }
   const cells = []
 
@@ -28,16 +25,14 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   // Calculate delay for each cell based on its position
   const getDelay = (x: number, y: number) => {
-    // This creates a wave effect from left to right
-    return x * 0.05
+    // This creates a wave effect from left to right with slight variation by row
+    return x * 0.05 + y * 0.01
   }
 
   // Automatically trigger completion after animation
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsAnimating(false)
-      // Add a small delay before calling onComplete to allow exit animation
-      setTimeout(onComplete, 1000)
+      onComplete()
     }, 4000) // Total animation duration
 
     return () => clearTimeout(timer)
@@ -47,7 +42,15 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     <motion.div
       className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: darkBg }}
-      initial={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 0.8,
+          ease: "easeInOut",
+        },
+      }}
     >
       {/* Checkboard grid */}
       <div
@@ -137,7 +140,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.3, duration: 0.5 }}
           >
-            Let me show you around
+            Portfolio
           </motion.p>
         </motion.div>
       </div>
