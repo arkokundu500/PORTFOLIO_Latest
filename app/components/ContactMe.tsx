@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
@@ -35,7 +34,7 @@ export default function ContactMe() {
       const formDataToSend = new FormData()
 
       // Add the access key
-      formDataToSend.append("access_key", "00be21f5-9387-41e6-bd8f-0fc0a9ee728a")
+      formDataToSend.append("access_key", "a9b4a022-c646-4b74-956d-f846800e5f2a")
 
       // Add form fields
       Object.entries(formData).forEach(([key, value]) => {
@@ -89,8 +88,8 @@ export default function ContactMe() {
         <div>
           <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
           <p className="mb-8 text-lg text-gray-300">
-            I am always open to new opportunities and collaborations. Feel free to reach out if you have a question or
-            just want to say hello!
+            I'm always open to new opportunities and collaborations. Feel free to reach out if you have to ask me anything or
+            just want to watch a movie with me !
           </p>
 
           <div className="space-y-6">
@@ -100,8 +99,8 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <a href="mailto:arkokundu200@gmail.com" className="text-blue-400 hover:underline">
-                  arkokundu200@gmail.com
+                <a href="mailto:arkokundu500@gmail.com" className="text-blue-400 hover:underline">
+                  arkokundu500@gmail.com
                 </a>
               </div>
             </div>
@@ -112,8 +111,8 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <a href="tel:+917439817750" className="text-blue-400 hover:underline">
-                  +91 74398 17750
+                <a href="tel:+1234567890" className="text-blue-400 hover:underline">
+                  +91 7439817750
                 </a>
               </div>
             </div>
@@ -124,8 +123,23 @@ export default function ContactMe() {
               </div>
               <div>
                 <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-300">West Bengal,India</p>
+                <p className="text-gray-300">Kalyani, West Bengal, India</p>
               </div>
+            </div>
+          </div>
+
+          {/* Google Maps Integration */}
+          <div className="mt-8 rounded-lg overflow-hidden shadow-lg border border-gray-700">
+            <div className="relative w-full h-0 pb-[75%]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8813546574465!2d88.44620641117855!3d22.991389979108828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8952d71094a7f%3A0x8f1c6d3ff467d96b!2sKalyani%20Government%20Engineering%20College!5e0!3m2!1sen!2sin!4v1742324385877!5m2!1sen!2sin"
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kalyani Government Engineering College Map"
+              />
             </div>
           </div>
         </div>

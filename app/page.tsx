@@ -59,7 +59,9 @@ export default function Home() {
         <footer className="bg-black text-white py-8 text-center">
           <div className="max-w-6xl mx-auto px-4">
             <p>© {new Date().getFullYear()} Arko Kundu. All rights reserved.</p>
-            <p className="mt-2 text-gray-400">Made with ❤️ using Next.js and Tailwind CSS</p>
+            <p className="mt-2 text-gray-400">Made with ❤️ using Next.js and Tailwind CSS.</p>
+            <p className="mt-2 text-gray-400">"There are things you cannot change, but you can change your perspective."</p>
+            <p className="mt-2 text-gray-400">Do not forget to play the music button at the horizon.</p>
           </div>
         </footer>
 
