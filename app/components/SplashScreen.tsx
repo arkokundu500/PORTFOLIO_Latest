@@ -140,7 +140,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.3, duration: 0.5 }}
           >
-            Portfolio
+            Let me show you around
           </motion.p>
         </motion.div>
       </div>
