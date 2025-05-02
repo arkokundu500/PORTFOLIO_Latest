@@ -8,12 +8,12 @@ import Section from "./Section"
 const projects = [
   {
     id: 1,
-    title: "Course Display Platform",
-    description: "A full-featured online website having display of courses with course selecting features and Authentication System using Firebase and custom Login.",
-    image: "/coming.png",
-    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS","JWT","Swiper JS","Headless UI"],
-    liveLink: "#",
-    githubLink: "https://github.com/arkokundu500/Mern-Project-1",
+    title: "Intervak - Remote Interview Platform",
+    description: "A fully working platform which helps interviewers to meet with the candidates through Video Calling.",
+    image: "/intervak.png",
+    tags: ["React","Next.js", "Tailwind CSS", "Convex DB", "TypeScript", "Responsive Design", "Clerk", "Stream API", "Web Development"],
+    liveLink: "https://intervak-arkokundu2025.vercel.app/",
+    githubLink: "https://github.com/arkokundu500/Intervak",
   },
   {
     id: 2,
@@ -43,12 +43,21 @@ const projects = [
     githubLink: "https://github.com/arkokundu500/VirtualLabs",
   },
   {
+    id: 9,
+    title: "Course Display Platform",
+    description: "A full-featured online website having display of courses with course selecting features and Authentication System using Firebase and custom Login.",
+    image: "/coming.png",
+    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS","JWT","Swiper JS","Headless UI", "Web Development"],
+    liveLink: "#",
+    githubLink: "https://github.com/arkokundu500/Mern-Project-1",
+  },
+  {
     id: 5,
     title: "Messaging Application",
     description: "A messaging application that allows users to send messages to each other on a serverless platform.",
     image: "/Message.png",
-    tags: ["React", "Tailwind CSS", "Strapi","Headless CMS" ,"Responsive Design"],
-    liveLink: "#",
+    tags: ["React", "Tailwind CSS", "Strapi","Headless CMS" ,"Responsive Design", "Web Development"],
+    liveLink: "https://github.com/arkokundu500/Messaging-Application",
     githubLink: "https://github.com/arkokundu500/Messaging-Application",
   },
   {
@@ -65,22 +74,23 @@ const projects = [
     title: "Typing Speed Test",
     description: "A typing speed test application to measure how fast you can type and measure the accuracy.",
     image: "/type_test.png",
-    tags: ["HTML/CSS", "Javascript","Responsive Design"],
+    tags: ["HTML/CSS", "Javascript","Responsive Design", "Web Development"],
     liveLink: "https://type-test-arko500.netlify.app/",
-    githubLink: "",
+    githubLink: "https://type-test-arko500.netlify.app/",
   },
   {
     id: 8,
     title: "Virtual Assistant - Jarvis",
     description: "A virtual assistant application that helps users to provide information and perform tasks through voice commands.Try saying -> Open google, Open Instagram, Play Come and Get your Love, Isaac Newton Wikipedia",
     image: "/jarvis.png",
-    tags: ["HTML/CSS","JavaScript","Voice command"],
+    tags: ["HTML/CSS","JavaScript","Voice command", "Web Development"],
     liveLink: "https://jarvis-va.netlify.app/",
-    githubLink: "",
-  }
+    githubLink: "https://jarvis-va.netlify.app/",
+  },
+  
 ]
 
-const categories = ["All", "React", "Next.js","Tailwind CSS","Machine Learning","HTML/CSS"]
+const categories = ["All", "Web Development","Machine Learning"]
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All")
