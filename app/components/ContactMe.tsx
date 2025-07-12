@@ -148,7 +148,7 @@ export default function ContactMe() {
            <img
             src="/phone.png" // Replace with the actual path to the image
             alt="Phone"
-            className="w-3/4 max-w-xs md:max-w-sm rounded-lg shadow-md"
+            className="w-3/4 max-w-xs md:max-w-sm rounded-lg shadow-md opacity-70 hover:opacity-100"
           />
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

@@ -99,7 +99,7 @@ export default function Skills() {
            <img
             src="/type.png" // Replace with the actual path to the image
             alt="Typing"
-            className="w-full h-auto rounded-lg shadow-md mb-4"
+            className="w-full h-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
           />
         </div>
       </div>
