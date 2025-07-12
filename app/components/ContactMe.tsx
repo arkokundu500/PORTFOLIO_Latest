@@ -145,6 +145,11 @@ export default function ContactMe() {
         </div>
 
         <div>
+           <img
+            src="/phone.png" // Replace with the actual path to the image
+            alt="Phone"
+            className="w-3/4 max-w-xs md:max-w-sm rounded-lg shadow-md"
+          />
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block mb-1 font-medium">
@@ -263,7 +268,9 @@ export default function ContactMe() {
               </motion.div>
             )}
           </form>
+          
         </div>
+        
       </div>
     </Section>
   )

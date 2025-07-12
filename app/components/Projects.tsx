@@ -7,6 +7,14 @@ import { ExternalLink, Github } from "lucide-react"
 import Section from "./Section"
 const projects = [
   {
+    id: 0,
+    title: "RAG Based Assistant to Deliver Role-Specific Insights",
+    description: "An AI-powered tool that provides personalized insights and recommendations based on user roles in a Finance Company of different departments.",
+    image: "/rag-bot.png",
+    tags: ["Vector DB - Chroma", "Langchain", "Google Gemini", "Embeddings", "Fast API","Streamlit","Python", "Machine Learning"],
+    githubLink: "https://github.com/arkokundu500/RAG_Chatbot",
+  },
+  {
     id: 1,
     title: "Intervak - Remote Interview Platform",
     description: "A fully working platform which helps interviewers to meet with the candidates through Video Calling.",
@@ -162,7 +170,27 @@ export default function Projects() {
             </div>
           </motion.div>
         ))}
+       
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {/* Left Column Image */}
+  <div>
+    <img
+      src="/robot-talk.png" 
+      alt="Developer Workspace Left View"
+      className="w-3/4 max-w-xs md:max-w-sm rounded-lg"
+    />
+  </div>
+  
+  {/* Right Column Image */}
+  <div>
+    <img
+      src="/droid.png" // Replace with your right image path
+      alt="Developer Workspace Right View"
+      className="w-3/4 max-w-xs md:max-w-sm rounded-lg"
+    />
+  </div>
+</div>
     </Section>
   )
 }

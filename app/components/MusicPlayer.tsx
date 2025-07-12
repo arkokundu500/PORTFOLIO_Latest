@@ -3,16 +3,29 @@
 import { useState, useRef, useEffect } from "react"
 import { Play, Pause } from "lucide-react"
 
+const SONGS = [
+  "/music.mp3",
+  "/music2.mp3",
+  "/music3.mp3",
+  "/music4.mp3",
+]
+
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  const currentSongRef = useRef<string>("") // Store the selected song
 
   // Initialize audio on component mount
   useEffect(() => {
+    // Randomly select a song from the set
+    const randomIndex = Math.floor(Math.random() * SONGS.length)
+    const selectedSong = SONGS[randomIndex]
+    currentSongRef.current = selectedSong
+
     // Create audio element
-    audioRef.current = new Audio("/music.mp3")
+    audioRef.current = new Audio(selectedSong)
     audioRef.current.loop = true
-    audioRef.current.volume = 0.5
+    audioRef.current.volume = 0.7
 
     // Add event listeners to sync state with actual audio state
     const audio = audioRef.current
@@ -41,10 +54,8 @@ export default function MusicPlayer() {
     if (!audioRef.current) return
 
     if (isPlaying) {
-      // Pause the audio
       audioRef.current.pause()
     } else {
-      // Play the audio with error handling
       audioRef.current.play().catch((error) => {
         console.error("Error playing audio:", error)
         setIsPlaying(false)
@@ -64,4 +75,3 @@ export default function MusicPlayer() {
     </div>
   )
 }
-

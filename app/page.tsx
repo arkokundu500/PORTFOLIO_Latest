@@ -76,63 +76,90 @@ export default function Home() {
           <WaveAnimation />
 
           {/* Footer Section */}
-          <footer className="bg-black text-white py-8 text-center relative z-10"> {/* Added relative z-10 if needed over WaveAnimation */}
-            <div className="max-w-6xl mx-auto px-4">
+<footer className="bg-black text-white py-8 text-center relative z-10">
+  <div className="max-w-6xl mx-auto px-4">
 
-              {/* Social Icons Container */}
-              <div className="flex justify-center space-x-5 mb-6">
-                <SocialIcon
-                  url={socialLinks.linkedin}
-                  network="linkedin"
-                  style={{ height: 35, width: 35 }} // Adjust size as needed
-                  fgColor="white" // Icon color
-                  bgColor="transparent" // No background circle color
-                  className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110" // Hover effect: fade + scale
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-                <SocialIcon
-                  url={socialLinks.github}
-                  network="github"
-                  style={{ height: 35, width: 35 }}
-                  fgColor="white"
-                  bgColor="transparent"
-                  className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-                <SocialIcon
-                  url={socialLinks.instagram}
-                  network="instagram"
-                  style={{ height: 35, width: 35 }}
-                  fgColor="white"
-                  bgColor="transparent"
-                  className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-                <SocialIcon
-                  url={socialLinks.x}
-                  network="x" // Use 'x' for the X/Twitter icon
-                  style={{ height: 35, width: 35 }}
-                  fgColor="white"
-                  bgColor="transparent"
-                  className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-              </div>
-              {/* End Social Icons Container */}
+    {/* Flex Container for Images + Content */}
+    <div className="flex items-center justify-between flex-wrap gap-4 relative">
+      
+      {/* Left Image */}
+      <div className="flex-shrink-0">
+        <img
+          src="bat-l.png" // Replace with your left image path
+          alt="Left Decorative"
+          className="w-45 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
 
-              {/* Existing Footer Text */}
-              <p>© {new Date().getFullYear()} Arko Kundu. All rights reserved.</p>
-              <p className="mt-2 text-gray-400">Made with ❤️ using Next.js and Tailwind CSS.</p>
-              <p className="mt-2 text-gray-400 italic">There are things you cannot change, but you can change your perspective.</p>
-              <p className="mt-2 text-gray-400">Do not forget to play the music button at the horizon.</p>
-              {/* End Existing Footer Text */}
+      {/* Centered Content */}
+      <div className="text-center flex-grow min-w-full md:min-w-0">
+        
+        {/* Social Icons Container */}
+        <div className="flex justify-center space-x-5 mb-6">
+          <SocialIcon
+            url={socialLinks.linkedin}
+            network="linkedin"
+            style={{ height: 35, width: 35 }}
+            fgColor="white"
+            bgColor="transparent"
+            className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+          <SocialIcon
+            url={socialLinks.github}
+            network="github"
+            style={{ height: 35, width: 35 }}
+            fgColor="white"
+            bgColor="transparent"
+            className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+          <SocialIcon
+            url={socialLinks.instagram}
+            network="instagram"
+            style={{ height: 35, width: 35 }}
+            fgColor="white"
+            bgColor="transparent"
+            className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+          <SocialIcon
+            url={socialLinks.x}
+            network="x"
+            style={{ height: 35, width: 35 }}
+            fgColor="white"
+            bgColor="transparent"
+            className="opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out transform hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </div>
+        {/* End Social Icons Container */}
 
-            </div>
-          </footer>
+        {/* Copyright Text */}
+        <p>© {new Date().getFullYear()} Arko Kundu. All rights reserved.</p>
+        <p className="mt-2 text-gray-400">Made with ❤️ using Next.js and Tailwind CSS.</p>
+        <p className="mt-2 text-gray-400 italic">There are things you cannot change, but you can change your perspective.</p>
+        <p className="mt-2 text-gray-400">Do not forget to play the music button at the horizon.</p>
+        {/* End Footer Text */}
+      </div>
+
+      {/* Right Image */}
+      <div className="flex-shrink-0">
+        <img
+          src="/bat-r.png" // Replace with your right image path
+          alt="Right Decorative"
+          className="w-45 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
+    </div>
+    {/* End Flex Container */}
+
+  </div>
+</footer>
           {/* End Footer Section */}
 
           {/* Music Player */}

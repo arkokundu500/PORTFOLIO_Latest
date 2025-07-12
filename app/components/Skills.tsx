@@ -96,6 +96,11 @@ export default function Skills() {
               ),
             )}
           </div>
+           <img
+            src="/type.png" // Replace with the actual path to the image
+            alt="Typing"
+            className="w-full h-auto rounded-lg shadow-md mb-4"
+          />
         </div>
       </div>
     </Section>
