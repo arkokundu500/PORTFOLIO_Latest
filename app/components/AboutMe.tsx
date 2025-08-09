@@ -127,6 +127,18 @@ export default function AboutMe() {
                 <Briefcase className="text-blue-600" size={20} />
               </div>
               <div>
+                <h4 className="font-semibold">Summer Intern</h4>
+                <p className="text-gray-400">Airports Authority of India | July 25</p>
+                <p className="text-gray-300">
+                  Gained comprehensive knowledge of Communication, Navigation, and Surveillance (CNS) systems critical to airport operations.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4 mt-1">
+                <Briefcase className="text-blue-600" size={20} />
+              </div>
+              <div>
                 <h4 className="font-semibold">AI Intern</h4>
                 <p className="text-gray-400">LanguifyAI | November 24 - December 24</p>
                 <p className="text-gray-300">
