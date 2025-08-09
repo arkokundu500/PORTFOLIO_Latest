@@ -50,17 +50,18 @@ const projects = [
     liveLink: "https://vlabs-2025-sr.vercel.app/",
     githubLink: "https://github.com/arkokundu500/VirtualLabs",
   },
-  {
-    id: 9,
-    title: "Course Display Platform",
-    description: "A full-featured online website having display of courses with course selecting features and Authentication System using Firebase and custom Login.",
-    image: "/coming.png",
-    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS","JWT","Swiper JS","Headless UI", "Web Development"],
-    liveLink: "#",
-    githubLink: "https://github.com/arkokundu500/Mern-Project-1",
-  },
+ 
   {
     id: 5,
+    title: "Notes Application",
+    description: "A web application for taking and organizing notes.",
+    image: "/notes.png",
+    tags: ["React.js", "Mongo DB", "React Router", "Nodemailer", "Web Development"],
+    liveLink: "https://arkokundu500.vercel.app/",
+    githubLink: "https://github.com/arkokundu500/notes_app"
+  },
+  {
+    id: 10,
     title: "Messaging Application",
     description: "A messaging application that allows users to send messages to each other on a serverless platform.",
     image: "/Message.png",
@@ -95,7 +96,15 @@ const projects = [
     liveLink: "https://jarvis-va.netlify.app/",
     githubLink: "https://jarvis-va.netlify.app/",
   },
-  
+   {
+    id: 9,
+    title: "Course Display Platform",
+    description: "A full-featured online website having display of courses with course selecting features and Authentication System using Firebase and custom Login.",
+    image: "/coming.png",
+    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS","JWT","Swiper JS","Headless UI", "Web Development"],
+    liveLink: "#",
+    githubLink: "https://github.com/arkokundu500/Mern-Project-1",
+  },
 ]
 
 const categories = ["All", "Web Development","Machine Learning"]

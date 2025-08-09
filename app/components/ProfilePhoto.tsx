@@ -27,7 +27,7 @@ export default function ProfilePhoto() {
       transition={{ duration: 2, ease: "easeInOut" }}
       whileHover={{ scale: 1.1 }}>
         <Image
-          src="/profile-pic-3.png?height=384&width=384"
+          src="/Arko_Kundu_2.png?height=384&width=384"
           alt="Profile"
           width={384}
           height={384}

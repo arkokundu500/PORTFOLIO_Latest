@@ -55,7 +55,7 @@ export default function Home() {
               <ProfilePhoto />
               <div className="mt-12">
                 <a
-                  href="https://drive.google.com/file/d/1drCRDMg3eUXmW1DLUL9cEMNRAQDrasap/view?usp=drive_linkt" // Ensure this link is correct
+                  href="https://drive.google.com/file/d/1NDyW0Bj9PtSjJMo5mQChwxnPg3oSba3v/view?usp=drive_linkt" // Ensure this link is correct
                   target="_blank" // Open in new tab
                   rel="noopener noreferrer" // Security best practice
                   className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full inline-block transition duration-300" // Added transition
